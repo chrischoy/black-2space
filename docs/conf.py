@@ -199,13 +199,13 @@ def process_sections(
 
 # -- Project information -----------------------------------------------------
 
-project = "Black"
+project = "Black-2space"
 copyright = "2018, Łukasz Langa and contributors to Black"
 author = "Łukasz Langa and contributors to Black"
 
 # Autopopulate version
 # The version, including alpha/beta/rc tags, but not commit hash and datestamps
-release = get_distribution("black").version.split("+")[0]
+release = get_distribution("black-2space").version.split("+")[0]
 # The short X.Y version.
 version = release
 for sp in "abcfr":
