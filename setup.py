@@ -28,7 +28,7 @@ if os.getenv("BLACK_USE_MYPYC", None) == "1":
 
 if USE_MYPYC:
     mypyc_targets = [
-        "src/black/__init__.py",
+        "src/black2/__init__.py",
         "src/blib2to3/pytree.py",
         "src/blib2to3/pygram.py",
         "src/blib2to3/pgen2/parse.py",
@@ -46,7 +46,7 @@ else:
     ext_modules = []
 
 setup(
-    name="black-2space",
+    name="black2",
     use_scm_version={
         "write_to": "src/_black_version.py",
         "write_to_template": 'version = "{version}"\n',
@@ -62,9 +62,9 @@ setup(
     license="MIT",
     py_modules=["_black_version"],
     ext_modules=ext_modules,
-    packages=["blackd", "black", "blib2to3", "blib2to3.pgen2", "black_primer"],
+    packages=["blackd", "black2", "blib2to3", "blib2to3.pgen2", "black_primer"],
     package_dir={"": "src"},
-    package_data={"blib2to3": ["*.txt"], "black": ["py.typed"]},
+    package_data={"blib2to3": ["*.txt"], "black2": ["py.typed"]},
     python_requires=">=3.6",
     zip_safe=False,
     install_requires=[
@@ -100,7 +100,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "black=black:patched_main",
+            "black2=black2:patched_main",
             "blackd=blackd:patched_main [d]",
             "black-primer=black_primer.cli:main",
         ]

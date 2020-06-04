@@ -17,8 +17,8 @@ from unittest.mock import patch, MagicMock
 from click import unstyle
 from click.testing import CliRunner
 
-import black
-from black import Feature, TargetVersion
+import black2
+from black2 import Feature, TargetVersion
 
 try:
     import blackd
